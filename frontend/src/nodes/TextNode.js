@@ -7,16 +7,19 @@ export const TextNode = ({ id, data }) => {
   const [handles, setHandles] = useState([]);
 
   useEffect(() => {
+    // Find all the "{{ }}" template strings in the text
     const matches = currText.match(/\{\{(.*?)\}\}/g) || [];
+    
+    // Create handles for each match, placing them on the right of the node
     setHandles(
       matches.map((match, index) => ({
         type: 'source',
         position: Position.Right,
         id: `${id}-handle-${index}`,
-        style: { top: `${index * 50}px` }
+        style: { top: `${index * 50}px` }  // Spread handles vertically
       }))
     );
-  }, [currText]);
+  }, [currText, id]);
 
   const handleTextChange = (e) => setCurrText(e.target.value);
 
@@ -24,7 +27,7 @@ export const TextNode = ({ id, data }) => {
     <NodeBase
       id={id}
       title="Text"
-      handles={handles}
+      handles={handles}  // Pass the handles to NodeBase
     >
       <div className="p-4">
         <h3 className="text-lg font-semibold text-purple-600 mb-4">Text Node</h3>

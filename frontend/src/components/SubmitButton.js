@@ -7,6 +7,8 @@ export const SubmitButton = () => {
     edges: state.edges
   }));
   const handleSubmit = async () => {
+    console.log('Nodes:', nodes);
+    console.log('Edges:', edges);
     try {
       const response = await fetch('http://localhost:8000/pipelines/parse', {
         method: 'POST',

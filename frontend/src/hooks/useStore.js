@@ -1,5 +1,3 @@
-// /frontend/src/hooks/useStore.js
-
 import { create } from "zustand";
 import {
   addEdge,
