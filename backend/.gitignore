@@ -1,0 +1,28 @@
+# Node modules for frontend
+frontend/node_modules/
+
+# Python virtual environment and cache files for backend
+backend/.venv/
+backend/venv/
+backend/ENV/
+backend/env/
+backend/.env
+backend/myenv
+
+# Python bytecode and caches
+backend/**/*.pyc
+backend/**/*.pyo
+backend/**/*.pyd
+backend/**/__pycache__/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

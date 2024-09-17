@@ -1,0 +1,12 @@
+/* /frontend/src/styles/index.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.handle {
+  background: #555;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
